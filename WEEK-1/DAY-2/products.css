@@ -1,0 +1,87 @@
+.bigsquare {
+    height: 100vh;
+
+}
+.photo, .photo2, .photo3, .photo4 {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/f8/Model_Posing_On_Typical_Studio_Set.jpg');
+    height: 30vh;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+}
+.photo2 {
+    background-image: url('https://media.istockphoto.com/photos/serious-young-afro-american-man-standing-in-studio-picture-id1040478272?k=20&m=1040478272&s=612x612&w=0&h=yQlmuIgDUC0b0pstfUPn6uUeM6D3177iMB0Y3f80tnY=');
+
+}
+
+.new {
+    background-color: green;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 11px;
+    position: relative;
+    top: 8px;
+    left: 8px;
+
+}
+.new p {
+    position: relative;
+    top: 8px;
+    left: 3px;
+}
+
+.ten p {
+    position: relative;
+    bottom: 4px;
+    left: 8px;
+}
+
+.ten{
+    background-color: red;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 11px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.text h3 {
+    text-align: center;
+}
+
+.product{
+    border: 1px solid red;
+    width: 20%;
+    display: inline-block;
+}
+
+span {
+    margin-left: 15px;
+}
+
+button {
+    margin-left: 25px;
+}
+
+.un {
+    color: green;
+}
+
+.product{
+    border: 1px solid red;
+    width: 20%;
+    display: inline-block;
+}
+
+.photo3 {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXsCfzha6prXVyjD2eHvv411LG1GLHTHH0LA&usqp=CAU')
+}
+
+.photo4 {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1WvvYA2QKWT64ECFJ1fAdieSlMUtfqdhsgQ&usqp=CAU')
+}

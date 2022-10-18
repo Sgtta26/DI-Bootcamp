@@ -1,0 +1,135 @@
+nav {
+    position: relative;
+}
+
+nav a {
+    
+}
+
+.photo {
+    position: absolute;
+    right: 0;
+    bottom: 2px;
+}
+
+.header {
+    background-image: url("https://www-cdn.eumetsat.int/files/styles/16_9_large/s3/2022-03/ocean_0.jpg?h=2f83cd36&itok=KIa1F6id");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+h4 {
+    text-align: center;
+}
+.aboutme {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.a {
+    width: 40%;
+    border-right: 2px solid black;
+    padding-right: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.b {
+    width: 60%;
+    padding-left: 15px;
+}
+
+.myprojects {
+    width: 60%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.myprojects img {
+    width: 100%;
+    height: 150px;
+}
+
+.blog {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.blog img {
+    width: 100%;
+    height: 200px;
+}
+
+.team {
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.team img {
+    width: 100%;
+    height: 200px;
+}
+
+.team div {
+    width: 25%;
+}
+
+h4 {
+    padding: 20px;
+    letter-spacing: 5px;
+    color: rgb(8, 8, 81);
+    text-transform: uppercase;
+}
+
+.contact {
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 30px;
+    border-top: 2px solid black;
+}
+
+.c {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+}
+
+.d {
+    width: 70%;
+}
+
+.icons i {
+    margin-right: 5px;
+    color: rgb(83, 24, 138);
+    font-size: 30px;
+}
+
+.name {
+    background-color: plum;
+    border-bottom-left-radius: 93%;
+}
+
+.a img {
+    border-radius: 50%;
+}

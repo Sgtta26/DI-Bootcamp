@@ -1,0 +1,85 @@
+nav {
+background-color: black;
+height: 10vh;
+}
+
+img{
+    height: 10vh;
+}
+
+a{
+    color: white;
+    margin-right: 30px;
+}
+
+.nav-div{
+    display: inline;
+    position: absolute;
+    right: 0;
+    top: 35px;
+}
+
+.image{
+    background-image: url("https://user-images.githubusercontent.com/30896388/168069577-2f570d08-61d3-49d8-b7dd-c4b9192aaf68.jpg");
+    height: 90vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+h1{
+    margin: 0;
+    position: relative;
+    top: 130px;
+    margin-left: 40px;
+    font-size: 36px;
+    
+}
+
+p{
+    position: relative;
+    top: 120px;
+    margin-right: 400px;
+}
+
+
+
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+
+    h1 {
+        font-size: 25px;
+        position: relative;
+        left: 200px;
+        top: 100px;
+    }
+    nav {
+        background-color: red;
+    }
+    a {
+        color: white;
+    }
+    
+ }
+
+@media all and (min-width: 480px) and (max-width: 768px) { 
+    h1 {
+        font-size: 35px;
+        position: relative;
+        left: 400px;
+        top: 200px;
+    }
+    nav {
+        background-color: yellowgreen;
+    }
+    a {
+        color: black;
+    }
+}
+
+@media all and (max-width: 480px) {
+    nav {
+        background-color: yellow;
+    }
+ }
+
+ 

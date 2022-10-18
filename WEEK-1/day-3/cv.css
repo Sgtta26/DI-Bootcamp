@@ -1,0 +1,48 @@
+.biggrid {
+    border:  2px solid black;
+    display: flex;
+    height: 100vh;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.head {
+    border:  2px solid black;
+    width: 98vw;
+    height: 20vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+.droite img {
+    height: 17vw;
+    width: 20vw;
+}
+
+.square  {
+    border:  2px solid black;
+    width: 98vw;
+    height: 70vw;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.contact {
+    border-bottom: 3px solid blue;
+    border-right: 3px solid blue;
+    display: flex;
+    flex-direction: column;
+}
+
+.work {
+    border-left: 3px solid blue;
+    border-top: 3px solid blue;
+
+}
