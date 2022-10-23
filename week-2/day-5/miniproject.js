@@ -6,18 +6,16 @@ function playTheGame() {
     let text = "Would you like to play a game ?\n YES or NO";
     if (confirm(text) == true) {
 
-      number = prompt("Enter a number between 0 and 10")
+      let number = prompt("Enter a number between 0 and 10")
         if ( isNaN(number)){
         alert("Sorry Not a number, Goodbye")
 
-        } else if (number >10 ){
+        } else if (number >10 || number < 0 ){
         alert("Sorry it’s not a good number, Goodbye")
 
         } else if  (number <= 10 && number > 0) {
-            const computerNumber = Math.random(5) 
-            // if(computerNumber > number ){
-            //     console.log("Your number is small");
-            // }
+            let computerNumber = Math.floor(Math.random() * 11) 
+            console.log(computerNumber);
             compareNumbers(number, computerNumber)
         }
         
@@ -29,16 +27,29 @@ function playTheGame() {
 
   function compareNumbers(userNumber,computerNumber) {
 
-    if (userNumber === computerNumber){
-    alert("WINNER")
+    let counter= 0
+    while(userNumber  != computerNumber && counter<3){
+        counter=counter+1
 
-    } else if(userNumber < computerNumber){ 
-    alert("Your number is smaller then the computer’s, guess again")
-    prompt("Try a new number")
+     if(userNumber < computerNumber){ 
+    
+        userNumber = prompt("Your number is smaller then the computer’s, guess again")
 
     } else if (userNumber > computerNumber) {
-    alert("Your number is bigger then the computer’s, guess again")
-    prompt("Try a new number")
+    
+        userNumber= prompt("Your number is bigger then the computer’s, guess again")
+    } 
+    if (userNumber == computerNumber){
+        alert("WINNER")
+        console.log("winner");
+        break
     }
-   
+    }
+    if (counter === 3 ){
+        alert("out of chances...")
+    }
+
+    // 0 == 'yes' true
+    // 0 ==='yes' false
+  
   }
