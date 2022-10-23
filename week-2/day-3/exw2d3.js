@@ -8,9 +8,9 @@ console.log("hello");
 //pour faire la mm action plusieurs fois:
 // 1 jai besoin dun compte de cb je dois faire de fois
 
-for (statement 1; statement 2; statement 3) {
+//for (statement 1; statement 2; statement 3) {
     // code block to be executed
-  }
+ // }
 
   //statement 1 is when does the counter start
   //statement 2 when does the counter work - how many time should it run
