@@ -1,0 +1,28 @@
+.planet {
+    
+}
+
+.Mercury {
+    background-color: lightcoral;
+}
+.Venus {
+    background-color: aqua;
+}
+.Earth {
+    background-color: blueviolet;
+}
+.Mars {
+    background-color: chartreuse;
+}
+.Jupiter {
+    background-color: darkgreen;
+}
+.Saturn {
+    background-color: brown;
+}
+.Uranus {
+    background-color: gold;
+}
+.Neptune {
+    background-color: red;
+}
