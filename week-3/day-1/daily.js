@@ -21,7 +21,7 @@ let solarSystem = [
     {name : 'Uranus' , moons : 27, color: "lightblue",radius:25559},
     {name : 'Neptune',moons : 14, color: "darkblue",radius:24764}
 ]
-​
+
 for(planet of solarSystem) {
     let planetDiv = document.createElement('div');
     planetDiv.style.width = planet.radius*2/1000*2 + 'px';
@@ -40,3 +40,4 @@ for(planet of solarSystem) {
     }
     planetDiv.style.backgroundColor = planet.color;
     document.body.appendChild(planetDiv);
+}
