@@ -134,6 +134,7 @@
 
 # # ex 10:
 
+
 # sandwich_orders = ["Tuna sandwich", "Avocado sandwich", "Egg sandwich", "Sabih sandwich", "Pastrami sandwich"]
 
 # finished_sandwiches = []
@@ -143,10 +144,37 @@
 #     finished_sandwiches.append(0)
 
 
+
+# // 2e facon avec pop
+# sandwich_orders = ["Tuna sandwich", "Avocado sandwich", "Egg sandwich", "Sabih sandwich", "Pastrami sandwich"]
+
+# finished_sandwiches = []
+
+# while len(sandwich_orders)  != 0:
+    
+#     finished_sandwich = sandwich_orders.pop(0)
+#     finished_sandwiches.append(finished_sandwich)
+#     print(f"I have prepared you a {finished_sandwich}")
+
+# print(f"Finished orders:\n{finished_sandwiches}")
+
 # ex 11:
 
 sandwich_orders = ["Tuna sandwich", "Avocado sandwich", "Egg sandwich", "Sabih sandwich", "Pastrami sandwich"]
 
+finished_sandwiches = []
+
+while len(sandwich_orders)  != 0:
+
+    if sandwich_orders [0] == "Pastrami sandwich":
+        del sandwich_orders[0]
+        continue
+    
+    finished_sandwich = sandwich_orders.pop(0)
+    finished_sandwiches.append(finished_sandwich)
+    print(f"I have prepared you a {finished_sandwich}")
+
+print(f"Finished orders:\n{finished_sandwiches}")
 
 
 
