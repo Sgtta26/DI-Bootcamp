@@ -72,7 +72,8 @@ info['number_stores']= 2
 
 # print(info)
 
-# 4. Print a sentence that explains who Zaras clients are ????
+# 4. Print a sentence that explains who Zaras clients are 
+print(", ".join(info['type_of_clothes']))
 
 info['country_creation'] = 'Spain'
 
@@ -124,18 +125,33 @@ for i in users:
     disney_users_A[i] = users.index(i)
 print(disney_users_A)
 
+# 2e facon pour faire disney_users_A question 1
+for idx,item in enumerate(users):
+    disney_users_A[item] = idx
+print(disney_users_A)
+
+
 disney_users_B = {}
 
 for i in users:
     disney_users_B[users.index(i)] = i
 print(disney_users_B)
 
-# marche pas
+# 2e facon pour faire disney_users_B question 2
+disney_users_B = dict(enumerate(users))
+print(disney_users_B)
+
+
+
 disney_users_C = {}
+# marche pas
+# disney_users_C = sorted(disney_users_A.keys()) + sorted(disney_users_A.values())
+# print(disney_users_C)
 
-disney_users_C = sorted(disney_users_A.keys()) + sorted(disney_users_A.values())
+users_sorted = sorted(users)
+
+disney_users_C = dict(zip(users_sorted,idx))
 print(disney_users_C)
-
 
 # 4.Only recreate the 1st result for:
 # The characters, which names contain the letter “i”.
@@ -143,11 +159,11 @@ print(disney_users_C)
 
 # marche pas
 
-disney_users_A = {}
+# disney_users_A = {}
 
-for i in users:
-    disney_users_A[i] = users.index(i)
-print(disney_users_A)
+users_filtered = []
+for name in users:
+    if ('i' in name )and name.startwith(('M','P')):
+        users_filtered.append(name)
 
-if :
-    print()
+print(users_filtered)
