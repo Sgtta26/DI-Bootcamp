@@ -22,7 +22,10 @@
 
 -- select customer.customer_id, customer.first_name, customer.last_name as full_name, payment.amount, payment.payment_date from customer inner join payment on payment.customer_id = customer.customer_id order by customer.customer_id;
 
-select title from film;
+-- select customer.customer_id, customer.first_name, customer.last_name, payment.payment_date, payment.amount
+-- from customer inner join payment on payment.customer_id = customer.customer_id
+-- order by customer.customer_id ASC;
 
--- select country_id from city group by country_id; 
+select * from film join inventory on film.film_id=inventory.film_id where film.film_id not in (inventory.film_id);
+select city.city, country.country from city join country on city.country_id = country.country_id;
 
