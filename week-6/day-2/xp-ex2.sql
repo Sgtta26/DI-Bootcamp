@@ -1,4 +1,4 @@
--- select * from customer;
+select * from customer;
 
 -- select first_name as full_name, last_name as full_name from customer;
 
@@ -26,6 +26,6 @@
 -- from customer inner join payment on payment.customer_id = customer.customer_id
 -- order by customer.customer_id ASC;
 
-select * from film join inventory on film.film_id=inventory.film_id where film.film_id not in (inventory.film_id);
-select city.city, country.country from city join country on city.country_id = country.country_id;
+-- select * from film join inventory on film.film_id=inventory.film_id where film.film_id not in (inventory.film_id);
+-- select city.city, country.country from city join country on city.country_id = country.country_id;
 
