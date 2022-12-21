@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+
+{%block content%}
+    <h2> New Rental </h2>
+    <form method="post">
+        {%csrf_token%}
+        {{form.as_p}}
+        <button type="submit"> Add </button>
+    </form>
+
+    {{errors}}
+{%endblock content%}

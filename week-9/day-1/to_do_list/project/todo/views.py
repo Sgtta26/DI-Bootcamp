@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import Category, Todo
 from .forms import TodoForm
 
@@ -24,4 +24,15 @@ def all_todos(request):
 
     context = {'todos': todos}
     return render(request, 'todo_list.html', context)
+
+
+def complete_todo(request, id):
+
+    todo = Todo.objects.get(id=id)
+
+    todo.has_been_done = True
+    todo.save()
+
+    return redirect(to ='todos')
+
 

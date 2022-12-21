@@ -1,0 +1,143 @@
+1. Create a new virtual environment in a new project directory. 
+Activate it, install Django.
+
+    - python/python3 -m venv bike_env
+    - mac. source bike_env/bin/activate
+    - windows. bike_env\Scripts\activate.bat
+                                (or activate.ps1)
+    - pip install django
+    - pip install psycopg2 (if doesn't work, pip install psycopg2-binary)
+
+2. Create a project called bikestore.
+
+    - django-admin startproject bikestore
+
+3. Create bikestore app rent.
+
+    - cd bikestore
+    - python manage.py startapp rent
+
+4. Connecting rent app to the project
+
+    - in bikestore.settings.py -> add "rent" to INSTALLED_APPS
+
+5. Setting up the database
+
+    - in pgAdmin, create database bike_store
+    - in bikestore.settings.py -> modify DATABASES
+                                DATABASES = {
+                                            'default': {
+                                                'ENGINE': 'django.db.backends.postgresql',
+                                                'NAME': 'bike_store',
+                                                'USER': 'postgres',
+                                                'PASSWORD': '<password>',
+                                                'HOST': 'localhost',
+                                                'PORT': '5432',
+                                            }
+                                        }
+    - Initial migration, inside terminal 
+                         >> python manage.py migrate
+
+6. Define models
+
+    - in rent.models.py, start creating models (Customer, Vehicle ... )
+    
+    Things to remember about creating models:
+        - first, create the parent tables
+        - types of relationships - 
+            -- one-to-one, models.OneToOneField
+            -- many-to-many, models.ManyToManyField
+            -- one-to-many, models.ForeignKeyField
+
+7. Make the migrations
+
+    - python manage.py makemigrations
+    - python manage.py migrate
+    - check the database and see changes
+
+8. Insert data into the Customer tables (3 customers)
+
+    - Through shell 
+        - python manage.py shell
+        >> from rent.models import Customer
+        >> customer1 = Customer(first_name = ,
+                                last_name = ,
+                                email = , 
+                                phone_number = ,
+                                address = ,
+                                city = ,
+                                country = )
+        >> customer1.save()
+
+    - Through the admin page
+        - python manage.py createsuperuser
+        - python manage.py runserver -> go to \admin url
+        - in rent.admin.py, register the models
+            >> from .models import Customer
+            >> admin.site.register(Customer)
+
+9. views
+
+    Example. create the view behind '/rent/customer/' url
+             show all customers, in alphabetical order
+
+    in rent.views.py
+        >> from .models import Customer
+        >> def all_customers(request):
+            ... 
+                {'customers': ...}
+                (get all the customers and store inside the context dictionary) 
+            ...
+            return render(request, 'all_customers.html', context)
+
+    creating the template
+        inside rent
+            - create templates folder 
+        
+        inside templates 
+            - create all_customers.html
+        
+        in all_customers.html
+            - to get the data from the context - use curly parentheses 
+            example. {{customers}}
+
+10. Create urls for the views
+    in bikestore.urls.py
+        - from rent.views import all_customers
+        - add to urlpatterns -> path('/rent/customer/', all_customers)
+
+11. Runserver
+
+
+12. Create forms for - 
+    CustomerForm 
+    VehicleForm
+    RentForm
+
+13. Create views (includes template, url) for the forms
+    - add_customer 
+    - add_vehicle
+    - add_rental
+
+14. Create the static folder (Inside the main folder [optional])
+    - inside the static folder, create style.css
+    - inside the static folder, create main.js
+    - if static is outside an app folder -> Specify location in STATICFILES_DIRS in settings.py
+
+15. Create base.html
+    - in general folder (bikestore, rent...), create 'templates' folder
+    - in settings.py, add the 'templates' folder location to DIRS in TEMPLATES
+    - in general folder.templates, create base.html 
+    - connect base.html to the static files 
+        >> On line 1, {% load static %}
+        >> Inside the HTML head, <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css"/>
+        >> Rerun server
+
+16. Connect the rest of the templates to the base.html
+    - inside .html files, 
+        >> On line 1, {% extends 'base.html' %}
+        >> Put all logic inside the
+             
+             {%block content%}
+              LOGIC 
+             {%endblock content%}
